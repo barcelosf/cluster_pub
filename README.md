@@ -45,6 +45,8 @@ pipx install poetry
 
 ### Install dependencies 📦
 
+OBS: Run the following commands inside the project directory.
+
 #### Define Python env version
 ```bash Python installation command
 poetry env use 3.11
