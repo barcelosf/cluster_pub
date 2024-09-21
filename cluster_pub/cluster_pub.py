@@ -36,7 +36,9 @@ class ClusterPub:
             bibliography_file=source_bibliography_file
         )
         progress_manager.update(task_id=parse_file_task_id, visible=False)
-        progress_manager.print(f"[green]Parsed bibliographic file {source_bibliography_file} ✓ ")
+        progress_manager.print(
+            f"[green]Parsed bibliographic file {source_bibliography_file} ✓ "
+        )
 
         preprocess_entries_task_id = progress_manager.add_task(
             description="Pre-processing file entries", total=None

@@ -2,7 +2,6 @@ import logging
 from typing_extensions import Annotated
 
 from typer import Typer, Argument, Option
-from rich import print
 from rich.progress import Progress, SpinnerColumn, TextColumn
 
 from cluster_pub.cluster_pub import ClusterPub
@@ -46,7 +45,7 @@ def cluster_publications(
             progress_manager=progress_manager,
         )
 
-        progress_manager.print('[green]Publications clustered successfully ✓ ')
+        progress_manager.print("[green]Publications clustered successfully ✓ ")
 
 
 if __name__ == "__main__":

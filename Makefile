@@ -1,2 +1,2 @@
 lint:
-	black cluster_pub/.
+	black cluster_pub/. .
