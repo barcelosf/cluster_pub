@@ -77,3 +77,27 @@ python main.py --help
 ```
 
 There is a folder in the project directory called sample_files, containing files that could be used to execute tests.
+
+## Extract Clustering Metrics  📈
+
+To calculate clustering metrics, like, Silhouette Score, Davies-Bouldin Score and Calinski-Harabasz Score run the following commands:
+
+#### Calculate Davies-Bouldin Score
+```bash Python installation command
+python cluster_evaluation.py davies_bouldin_score {source_file} {number_of_clusters}
+```
+
+#### Calculate Calinski-Harabasz Score
+```bash Python installation command
+python cluster_evaluation.py calinski_harabasz_score {source_file} {number_of_clusters}
+```
+
+#### Calculate Silhouette Score
+```bash Python installation command
+python cluster_evaluation.py silhouette_score {source_file} {number_of_clusters} --distance-metric
+```
+
+#### To obtain help for the score commands listed above run the following command:
+```bash Python installation command
+python cluster_evaluation.py {score_command} -- help
+```
