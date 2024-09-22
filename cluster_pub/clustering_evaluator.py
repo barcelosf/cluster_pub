@@ -56,25 +56,25 @@ class ClusteringEvaluator:
         self, bibliography_file: str, number_of_clusters: int
     ) -> float:
 
-        clusters_silhouette_score = self.calculate_clusters_score(
+        clusters_davies_bouldin_score = self.calculate_clusters_score(
             bibliography_file=bibliography_file,
             number_of_clusters=number_of_clusters,
             clusters_score="davies_bouldin_score",
         )
 
-        return clusters_silhouette_score
+        return clusters_davies_bouldin_score
 
     def calculate_clusters_calinski_harabasz_score(
         self, bibliography_file: str, number_of_clusters: int
     ) -> float:
 
-        clusters_silhouette_score = self.calculate_clusters_score(
+        clusters_calinski_harabasz_score = self.calculate_clusters_score(
             bibliography_file=bibliography_file,
             number_of_clusters=number_of_clusters,
             clusters_score="calinski_harabasz_score",
         )
 
-        return clusters_silhouette_score
+        return clusters_calinski_harabasz_score
 
     def calculate_clusters_score(
         self, bibliography_file: str, number_of_clusters: int, clusters_score: str
@@ -94,11 +94,11 @@ class ClusteringEvaluator:
 
         clusters_score_function = self._clusters_scores_functions.get(clusters_score)
 
-        clusters_silhouette_score = clusters_score_function(
+        clusters_index_score = clusters_score_function(
             embedded_abstracts, labels=abstracts_clusters_labels
         )
 
-        return clusters_silhouette_score
+        return clusters_index_score
 
     def embed_bibliography_abstracts(self, bibliography_file: str) -> array:
 
