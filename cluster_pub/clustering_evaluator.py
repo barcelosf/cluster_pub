@@ -34,6 +34,7 @@ class ClusteringEvaluator:
         self.bibliography_processor = BibliographyAbstractProcessor()
         self.abstract_embedder = AbstractEmbedder()
         self.similarity_calculator = AbstractSimilarityCalculator()
+        self.number_of_repetitions = 100
 
     def calculate_clusters_silhouette_score(
         self,
@@ -94,9 +95,10 @@ class ClusteringEvaluator:
 
         clusters_score_function = self._clusters_scores_functions.get(clusters_score)
 
-        clusters_index_score = clusters_score_function(
+        clusters_index_scores = list(clusters_score_function(
             embedded_abstracts, labels=abstracts_clusters_labels
-        )
+        ) for _ in range(self.number_of_repetitions))
+        clusters_index_score = sum(clusters_index_scores) / len(clusters_index_scores)
 
         return clusters_index_score
 
