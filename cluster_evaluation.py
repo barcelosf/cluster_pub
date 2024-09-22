@@ -15,7 +15,8 @@ def calculate_davies_bouldin_score(
     source_file: Annotated[
         str,
         Argument(
-            help="Path for Bibliography File. Allowed Bibliographic File Extensions: BibTex (.bib), RIS (.ris) and NBIB (.nbib)"
+            help="Path for Bibliography File. Allowed Bibliographic File Extensions: "
+            "BibTex (.bib), RIS (.ris) and NBIB (.nbib)"
         ),
     ],
     number_of_clusters: Annotated[
@@ -37,7 +38,8 @@ def calculate_calinski_harabasz_score(
     source_file: Annotated[
         str,
         Argument(
-            help="Path for Bibliography File. Allowed Bibliographic File Extensions: BibTex (.bib), RIS (.ris) and NBIB (.nbib)"
+            help="Path for Bibliography File. Allowed Bibliographic File Extensions:"
+            " BibTex (.bib), RIS (.ris) and NBIB (.nbib)"
         ),
     ],
     number_of_clusters: Annotated[
@@ -59,7 +61,8 @@ def calculate_silhouette_score(
     source_file: Annotated[
         str,
         Argument(
-            help="Path for Bibliography File. Allowed Bibliographic File Extensions: BibTex (.bib), RIS (.ris) and NBIB (.nbib)"
+            help="Path for Bibliography File. Allowed Bibliographic File Extensions:"
+            " BibTex (.bib), RIS (.ris) and NBIB (.nbib)"
         ),
     ],
     number_of_clusters: Annotated[
