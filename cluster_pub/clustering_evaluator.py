@@ -34,7 +34,7 @@ class ClusteringEvaluator:
         self.bibliography_processor = BibliographyAbstractProcessor()
         self.abstract_embedder = AbstractEmbedder()
         self.similarity_calculator = AbstractSimilarityCalculator()
-        self.number_of_repetitions = 100
+        self.number_of_repetitions = 10
 
     def calculate_clusters_silhouette_score(
         self,
@@ -45,11 +45,12 @@ class ClusteringEvaluator:
 
         silhouette_score_function = f"silhouette_score_{distance_metric}"
 
-        clusters_silhouette_score = self.calculate_clusters_score(
+        clusters_silhouette_scores = list(self.calculate_clusters_score(
             bibliography_file=bibliography_file,
             number_of_clusters=number_of_clusters,
             clusters_score=silhouette_score_function,
-        )
+        ) for _ in range(self.number_of_repetitions))
+        clusters_silhouette_score = sum(clusters_silhouette_scores) / len(clusters_silhouette_scores)
 
         return clusters_silhouette_score
 
@@ -57,11 +58,12 @@ class ClusteringEvaluator:
         self, bibliography_file: str, number_of_clusters: int
     ) -> float:
 
-        clusters_davies_bouldin_score = self.calculate_clusters_score(
+        clusters_davies_bouldin_scores = list(self.calculate_clusters_score(
             bibliography_file=bibliography_file,
             number_of_clusters=number_of_clusters,
             clusters_score="davies_bouldin_score",
-        )
+        ) for _ in range(self.number_of_repetitions))
+        clusters_davies_bouldin_score = sum(clusters_davies_bouldin_scores) / len(clusters_davies_bouldin_scores)
 
         return clusters_davies_bouldin_score
 
@@ -69,11 +71,12 @@ class ClusteringEvaluator:
         self, bibliography_file: str, number_of_clusters: int
     ) -> float:
 
-        clusters_calinski_harabasz_score = self.calculate_clusters_score(
+        clusters_calinski_harabasz_scores = list(self.calculate_clusters_score(
             bibliography_file=bibliography_file,
             number_of_clusters=number_of_clusters,
             clusters_score="calinski_harabasz_score",
-        )
+        ) for _ in range(self.number_of_repetitions))
+        clusters_calinski_harabasz_score = sum(clusters_calinski_harabasz_scores) / len(clusters_calinski_harabasz_scores)
 
         return clusters_calinski_harabasz_score
 
@@ -95,10 +98,9 @@ class ClusteringEvaluator:
 
         clusters_score_function = self._clusters_scores_functions.get(clusters_score)
 
-        clusters_index_scores = list(clusters_score_function(
+        clusters_index_score = clusters_score_function(
             embedded_abstracts, labels=abstracts_clusters_labels
-        ) for _ in range(self.number_of_repetitions))
-        clusters_index_score = sum(clusters_index_scores) / len(clusters_index_scores)
+        )
 
         return clusters_index_score
 
