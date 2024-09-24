@@ -71,6 +71,31 @@ To execute ClusterPub run the following command:
 python main.py {source_file} {result_file}
 ```
 
+#### OBS: The result_file name should contain the desired extension.
+
+The allowed extensions for the source file are:
+
+- NBIB
+- RIS
+- BibTex
+
+The allowed extensions for the result file are:
+
+- EPS
+- JPEG
+- PDF
+- PGF
+- PNG
+- PS
+- Raw (Binary)
+- RGBA
+- SVG
+- SVGZ
+- TIF
+- TIFF
+- Webp
+
+
 #### To obtain help about the parameters and options available execute the following command:
 ```bash Python installation command
 python main.py --help
@@ -81,6 +106,9 @@ There is a folder in the project directory called sample_files, containing files
 ## Extract Clustering Metrics  📈
 
 To calculate clustering metrics, like, Silhouette Score, Davies-Bouldin Score and Calinski-Harabasz Score run the following commands:
+
+OBS: The argument number_of_clusters is not the desired clusters quantity,
+but it is the quantity of clusters/categories that might exit in the analysed dataset.
 
 #### Calculate Davies-Bouldin Score
 ```bash Python installation command
@@ -94,10 +122,21 @@ python cluster_evaluation.py calinski_harabasz_score {source_file} {number_of_cl
 
 #### Calculate Silhouette Score
 ```bash Python installation command
-python cluster_evaluation.py silhouette_score {source_file} {number_of_clusters} --distance-metric
+python cluster_evaluation.py silhouette_score {source_file} {number_of_clusters} --distance-metric={distance_metric}
 ```
 
 #### To obtain help for the score commands listed above run the following command:
 ```bash Python installation command
 python cluster_evaluation.py {score_command} -- help
 ```
+
+## Background Information 🔍
+
+The default hyperparameters and algorithms used in this project are:
+
+- Word Embeddings Technicque: Hash2Vec
+- Dimensionality Reduction Technicque: SVD
+- Number of singular values used in SVD: 5
+- Clustering Algorithm: Hierarchical Clustering
+- Distance Metric: Cosine Similarity
+- Linkage Method: Weighted

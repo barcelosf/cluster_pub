@@ -45,12 +45,17 @@ class ClusteringEvaluator:
 
         silhouette_score_function = f"silhouette_score_{distance_metric}"
 
-        clusters_silhouette_scores = list(self.calculate_clusters_score(
-            bibliography_file=bibliography_file,
-            number_of_clusters=number_of_clusters,
-            clusters_score=silhouette_score_function,
-        ) for _ in range(self.number_of_repetitions))
-        clusters_silhouette_score = sum(clusters_silhouette_scores) / len(clusters_silhouette_scores)
+        clusters_silhouette_scores = list(
+            self.calculate_clusters_score(
+                bibliography_file=bibliography_file,
+                number_of_clusters=number_of_clusters,
+                clusters_score=silhouette_score_function,
+            )
+            for _ in range(self.number_of_repetitions)
+        )
+        clusters_silhouette_score = sum(clusters_silhouette_scores) / len(
+            clusters_silhouette_scores
+        )
 
         return clusters_silhouette_score
 
@@ -58,12 +63,17 @@ class ClusteringEvaluator:
         self, bibliography_file: str, number_of_clusters: int
     ) -> float:
 
-        clusters_davies_bouldin_scores = list(self.calculate_clusters_score(
-            bibliography_file=bibliography_file,
-            number_of_clusters=number_of_clusters,
-            clusters_score="davies_bouldin_score",
-        ) for _ in range(self.number_of_repetitions))
-        clusters_davies_bouldin_score = sum(clusters_davies_bouldin_scores) / len(clusters_davies_bouldin_scores)
+        clusters_davies_bouldin_scores = list(
+            self.calculate_clusters_score(
+                bibliography_file=bibliography_file,
+                number_of_clusters=number_of_clusters,
+                clusters_score="davies_bouldin_score",
+            )
+            for _ in range(self.number_of_repetitions)
+        )
+        clusters_davies_bouldin_score = sum(clusters_davies_bouldin_scores) / len(
+            clusters_davies_bouldin_scores
+        )
 
         return clusters_davies_bouldin_score
 
@@ -71,12 +81,17 @@ class ClusteringEvaluator:
         self, bibliography_file: str, number_of_clusters: int
     ) -> float:
 
-        clusters_calinski_harabasz_scores = list(self.calculate_clusters_score(
-            bibliography_file=bibliography_file,
-            number_of_clusters=number_of_clusters,
-            clusters_score="calinski_harabasz_score",
-        ) for _ in range(self.number_of_repetitions))
-        clusters_calinski_harabasz_score = sum(clusters_calinski_harabasz_scores) / len(clusters_calinski_harabasz_scores)
+        clusters_calinski_harabasz_scores = list(
+            self.calculate_clusters_score(
+                bibliography_file=bibliography_file,
+                number_of_clusters=number_of_clusters,
+                clusters_score="calinski_harabasz_score",
+            )
+            for _ in range(self.number_of_repetitions)
+        )
+        clusters_calinski_harabasz_score = sum(clusters_calinski_harabasz_scores) / len(
+            clusters_calinski_harabasz_scores
+        )
 
         return clusters_calinski_harabasz_score
 

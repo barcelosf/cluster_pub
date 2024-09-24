@@ -14,13 +14,15 @@ def cluster_publications(
     source_file: Annotated[
         str,
         Argument(
-            help="Path for Bibliography File. Allowed Bibliographic File Extensions: BibTex (.bib), RIS (.ris) and NBIB (.nbib)"
+            help="Path for Bibliography File. Allowed Bibliographic File Extensions:"
+            " BibTex (.bib), RIS (.ris) and NBIB (.nbib)"
         ),
     ],
     result_file: Annotated[
         str,
         Argument(
-            help="Path to store result file. Allowed File extensions: PNG and PDF"
+            help="Path to store result file. Allowed File extensions:"
+            " EPS, JPEG, JPG, PDF, PGF, PNG, PS, Raw, RGBA, SVG, SVGZ, TIF, TIFF, Webp"
         ),
     ],
     verbose: Annotated[
