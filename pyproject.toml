@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "cluster-pub"
 version = "0.1.0"
-description = ""
+description = "CLI to cluster scientific papers"
 authors = ["felipe barcelos <felipebarcelos@ufu.br>"]
 readme = "Pypi.md"
 
