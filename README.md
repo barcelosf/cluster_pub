@@ -112,22 +112,22 @@ but it is the quantity of clusters/categories that might exit in the analysed da
 
 #### Calculate Davies-Bouldin Score
 ```bash Python installation command
-python cluster_evaluation.py davies_bouldin_score {source_file} {number_of_clusters}
+python cluster_pub/cluster_evaluation.py davies_bouldin_score {source_file} {number_of_clusters}
 ```
 
 #### Calculate Calinski-Harabasz Score
 ```bash Python installation command
-python cluster_evaluation.py calinski_harabasz_score {source_file} {number_of_clusters}
+python cluster_pub/cluster_evaluation.py calinski_harabasz_score {source_file} {number_of_clusters}
 ```
 
 #### Calculate Silhouette Score
 ```bash Python installation command
-python cluster_evaluation.py silhouette_score {source_file} {number_of_clusters} --distance-metric={distance_metric}
+python cluster_pub/cluster_evaluation.py silhouette_score {source_file} {number_of_clusters} --distance-metric={distance_metric}
 ```
 
 #### To obtain help for the score commands listed above run the following command:
 ```bash Python installation command
-python cluster_evaluation.py {score_command} -- help
+python cluster_pub/cluster_evaluation.py {score_command} -- help
 ```
 
 ## Background Information 🔍
