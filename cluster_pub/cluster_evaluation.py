@@ -3,7 +3,7 @@ from typing_extensions import Annotated
 from typer import Typer, Argument, Option
 from rich import print
 
-from clustering_evaluator import ClusteringEvaluator
+from cluster_pub.clustering_evaluator import ClusteringEvaluator
 
 clustering_evaluator_instance = ClusteringEvaluator()
 

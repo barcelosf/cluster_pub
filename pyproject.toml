@@ -19,8 +19,8 @@ python = "~3.11"
 black = "~24.8.0"
 
 [tool.poetry.scripts]
-cluster-pub = "main:application"
-cluster-pub-metrics = "cluster_evaluation:application"
+cluster-pub = "cluster_pub.main:application"
+cluster-pub-metrics = "cluster_pub.cluster_evaluation:application"
 
 [build-system]
 requires = ["poetry-core"]
