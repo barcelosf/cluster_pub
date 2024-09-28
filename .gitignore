@@ -2,3 +2,4 @@
 __pycache__/*
 cluster_pub/__pycache__/*
 */__pycache__/*
+dist/*
