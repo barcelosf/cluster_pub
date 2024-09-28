@@ -3,7 +3,7 @@ name = "cluster-pub"
 version = "0.1.0"
 description = ""
 authors = ["felipe barcelos <felipebarcelos@ufu.br>"]
-readme = "README.md"
+readme = "Pypi.md"
 
 [tool.poetry.dependencies]
 typer = "~0.12.5"
