@@ -68,7 +68,7 @@ To execute ClusterPub run the following command:
 
 #### Cluster publications present in a bibliographic file
 ```bash Python installation command
-python main.py {source_file} {result_file}
+python cluster_pub/main.py {source_file} {result_file}
 ```
 
 #### OBS: The result_file name should contain the desired extension.
@@ -98,7 +98,7 @@ The allowed extensions for the result file are:
 
 #### To obtain help about the parameters and options available execute the following command:
 ```bash Python installation command
-python main.py --help
+python cluster_pub/main.py --help
 ```
 
 There is a folder in the project directory called sample_files, containing files that could be used to execute tests.

@@ -4,7 +4,7 @@ from typing_extensions import Annotated
 from typer import Typer, Argument, Option
 from rich.progress import Progress, SpinnerColumn, TextColumn
 
-from cluster_pub.cluster_pub import ClusterPub
+from cluster_publications import ClusterPub
 
 application = Typer()
 
