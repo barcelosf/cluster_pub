@@ -85,9 +85,9 @@ OBS: The argument number_of_clusters does not specify the desired number of clus
 To calculate clustering metrics, like Silhouette Score, Davies-Bouldin Score, and Calinski-Harabasz Score, run the following commands:
 
 ```bash
-cluster-pub-metrics davies_bouldin_score {source_file} {number_of_clusters}
-cluster-pub-metrics calinski_harabasz_score {source_file} {number_of_clusters}
-cluster-pub-metrics silhouette_score {source_file} {number_of_clusters} --distance-metric={distance_metric}
+cluster-pub-metrics davies-bouldin-score {source_file} {number_of_clusters}
+cluster-pub-metrics calinski-harabasz-score {source_file} {number_of_clusters}
+cluster-pub-metrics silhouette-score {source_file} {number_of_clusters} --distance-metric={distance_metric}
 ```
 
 ## Background Information 🔍

@@ -10,7 +10,7 @@ clustering_evaluator_instance = ClusteringEvaluator()
 application = Typer()
 
 
-@application.command(name="davies_bouldin_score")
+@application.command(name="davies-bouldin-score")
 def calculate_davies_bouldin_score(
     source_file: Annotated[
         str,
@@ -33,7 +33,7 @@ def calculate_davies_bouldin_score(
     print(f"Davies-Bouldin Score: {davies_bouldin_score}")
 
 
-@application.command(name="calinski_harabasz_score")
+@application.command(name="calinski-harabasz-score")
 def calculate_calinski_harabasz_score(
     source_file: Annotated[
         str,
@@ -56,7 +56,7 @@ def calculate_calinski_harabasz_score(
     print(f"Calinski-Harabasz Score: {calinski_harabasz_score}")
 
 
-@application.command(name="silhouette_score")
+@application.command(name="silhouette-score")
 def calculate_silhouette_score(
     source_file: Annotated[
         str,
