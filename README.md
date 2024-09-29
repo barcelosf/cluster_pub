@@ -10,6 +10,14 @@ ClusterPub was developed using Python 3.11.
 
 ## Installation 🛠
 
+It is possible to use ClusterPub as a standalone CLI, to do so install it with pip:
+
+```bash Python installation command
+pip install cluster-pub
+```
+
+But if you want to run the code by yourself, execute the following commands:
+
 ### Update Linux packages and install dependencies
 
 First, update the Linux packages and install the necessary dependencies.
