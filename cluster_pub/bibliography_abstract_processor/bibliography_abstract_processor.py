@@ -66,7 +66,7 @@ class BibliographyAbstractProcessor:
         return processed_bibliography_abstract.upper()
 
     def decode_abstract(self, abstract: str) -> str:
-        initially_decoded_abstract = normalize("NFD", abstract)
+        initially_decoded_abstract = normalize("NFKD", abstract)
         bytes_processed_abstract = initially_decoded_abstract.encode("ascii", "ignore")
 
         decoded_abstract = bytes_processed_abstract.decode("UTF-8")
