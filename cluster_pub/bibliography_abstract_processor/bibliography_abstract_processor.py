@@ -53,7 +53,7 @@ class BibliographyAbstractProcessor:
         return processed_bibliography_file_entry
 
     def process_bibliography_abstract(self, bibliography_abstract: str) -> str:
-        processed_bibliography_abstract = re.sub(r"[\W]", "", bibliography_abstract)
+        processed_bibliography_abstract = re.sub(r"[^a-zA-Z0-9]", "", bibliography_abstract)
 
         processed_bibliography_abstract = self.decode_abstract(
             abstract=processed_bibliography_abstract
