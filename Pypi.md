@@ -82,7 +82,7 @@ The default hyperparameters and algorithms used in this project are:
 
 - Word Embeddings Technicque: Hash2Vec
 - Dimensionality Reduction Technicque: SVD
-- Number of singular values used in SVD: 5
+- Number of singular values used in SVD: 8
 - Clustering Algorithm: Hierarchical Clustering
 - Distance Metric: Cosine Similarity
 - Linkage Method: Weighted

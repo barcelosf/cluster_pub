@@ -16,9 +16,9 @@ class AbstractEmbedder:
 
     def __init__(self):
         self.abstract_vectorizer = HashingVectorizer(
-            analyzer="char", ngram_range=(3, 3)
+            analyzer="char", ngram_range=(4, 5)
         )
-        self.dimensionality_reducer = TruncatedSVD(n_components=5)
+        self.dimensionality_reducer = TruncatedSVD(n_components=8)
 
     def embed_bibliography_abstracts(
         self, bibliography_abstracts: List[ProcessedBibliographyFileData]
