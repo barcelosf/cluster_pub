@@ -100,5 +100,6 @@ The default hyperparameters and algorithms used in this project are:
 - Clustering Algorithm: Hierarchical Clustering
 - Distance Metric: Cosine Similarity
 - Linkage Method: Weighted
+- Supported Languages: English
 
 
