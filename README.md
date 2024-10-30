@@ -1,3 +1,6 @@
+# Languages:
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/barcelosf/cluster_pub/blob/master/README.pt-br.md)
+
 # ClusterPub
 
 ClusterPub is a tool developed to help researchers in their processes of bibliographic review, 
