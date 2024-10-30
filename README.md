@@ -4,6 +4,18 @@ ClusterPub is a tool developed to help researchers in their processes of bibliog
 helping them to find papers related to their areas of interest,
 based on search results returned by paper repositories, like IEEE Xplore and Pubmed.
 
+## Use Cases 📚
+
+### Literature Review for Thesis
+A graduate student needs to conduct a literature review on Artificial Intelligence for his final thesis. He performs a search on IEEE Xplore and exports the results in BibTeX format. With hundreds of articles, the manual process of filtering and organizing would be time-consuming.
+
+Using the ClusterPub tool, he processes the BibTeX file in a few seconds, generating a dendrogram that groups the articles based on their similarities. This way, he can quickly identify which articles are most relevant to his research topic, optimizing the time spent selecting materials.
+
+### Source Organization in Collaborative Research
+A team of researchers working on an interdisciplinary project (involving mental health and neuroscience) collects articles from different repositories, such as IEEE Xplore and PubMed, exporting the files in different formats (BibTeX and NBIB). Each team member has different areas of focus, and the number of gathered articles is too large to be analyzed manually.
+
+The ClusterPub tool is used to automatically group the articles by thematic similarity. The result, displayed as a dendrogram, helps the team identify subgroups of articles and determine which texts are priorities for each sub-area, facilitating the division of readings and the organization of collaborative research.
+
 ## Programming Language 💻
 
 ClusterPub was developed using Python 3.11.
@@ -101,5 +113,3 @@ The default hyperparameters and algorithms used in this project are:
 - Distance Metric: Cosine Similarity
 - Linkage Method: Weighted
 - Supported Languages: English
-
-
