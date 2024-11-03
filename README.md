@@ -25,14 +25,7 @@ ClusterPub was developed using Python 3.11.
 
 ## Installation 🛠
 
-It is possible to use ClusterPub as a standalone CLI, to do so install it with pip:
-
-```bash Python installation command
-pip install -U Pillow
-pip install -U cluster-pub
-```
-
-But if you want to run the code by yourself, execute the following commands:
+To install and execute ClusterPub it is necessary to have Python 3.11 installed.
 
 ### Update Linux packages and install dependencies
 
@@ -44,19 +37,9 @@ sudo apt install -y python3-pip python3-dev
 sudo apt install python3.11-venv
 ```
 
-### Install pipx and Poetry
-
-Next, install pipx and Poetry.
-
-```bash
-python3 -m pip install --user pipx
-python3 -m pipx ensurepath
-pipx install poetry
-```
-
 ### Install Python 3.11
 
-Now, install Python 3.11 using the `pyenv` tool. If you don't have `pyenv` installed, you can install it using the following command:
+Install Python 3.11 using the `pyenv` tool. If you don't have `pyenv` installed, you can install it using the following command:
 
 ```bash
 curl https://pyenv.run | bash
@@ -66,6 +49,28 @@ Then, install Python 3.11:
 
 ```bash
 pyenv install 3.11.0
+pyenv global 3.11.0
+```
+
+### Install ClusterPub CLI
+
+It is possible to use ClusterPub as a standalone CLI, to do so install it with pip:
+
+```bash Python installation command
+pip install -U Pillow
+pip install -U cluster-pub
+```
+
+But if you want to run the code by yourself, execute the following commands:
+
+### Install pipx and Poetry
+
+Next, install pipx and Poetry.
+
+```bash
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+pipx install poetry
 ```
 
 ### Create a Python virtual environment
