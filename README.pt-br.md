@@ -23,6 +23,7 @@ ClusterPub foi desenvolvido utilizando Python 3.11.
 É possível utilizar o ClusterPub como uma CLI independente, para isso instale-o com pip:
 
 ```bash
+pip install -U Pillow
 pip install -U cluster-pub
 ```
 
