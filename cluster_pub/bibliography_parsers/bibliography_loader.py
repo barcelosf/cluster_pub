@@ -32,7 +32,9 @@ class BibliographyLoader:
     ) -> BibliographyFileData:
 
         bibliography_entry_title = bibliography_entry.get("title")
-        bibliography_entry_abstract = bibliography_entry.get("abstract")
+        bibliography_entry_abstract = (
+            bibliography_entry.get("abstract") or bibliography_entry_title
+        )
 
         serialized_bibliography_entry = BibliographyFileData(
             title=bibliography_entry_title, abstract=bibliography_entry_abstract
