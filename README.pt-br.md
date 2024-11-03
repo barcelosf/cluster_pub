@@ -36,6 +36,7 @@ Primeiro, atualize os pacotes do Linux e instale as dependências necessárias.
 ```bash
 sudo apt update
 sudo apt install -y python3-pip python3-dev
+sudo apt install python3.11-venv
 ```
 
 ### Instale pipx e Poetry
