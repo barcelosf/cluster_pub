@@ -52,6 +52,16 @@ pyenv install 3.11.0
 pyenv global 3.11.0
 ```
 
+Before installing ClusterPub create a virtual environment
+
+### Create Virtual Environment
+
+```bash
+pip install -U virtualenv
+python3.11 -m venv {environment_name}
+source {environment_name}/bin/activate
+```
+
 ### Install ClusterPub CLI
 
 It is possible to use ClusterPub as a standalone CLI, to do so install it with pip:
