@@ -13,6 +13,8 @@ logger = getLogger(__name__)
 
 class RisLoader(BibliographyLoader):
 
+    _alternative_title_tag: str = "journal_name"
+
     def load_bibliography_file_entries(self, bibliography_file: str) -> List[Dict]:
 
         utf8_encoding = FileEncodingEnum.UTF8

@@ -6,6 +6,8 @@ from .schemas import BibliographyFileData
 
 class BibliographyLoader:
 
+    _alternative_title_tag: str = None
+
     def load_bibliography_file(
         self, bibliography_file: str
     ) -> List[BibliographyFileData]:
@@ -33,7 +35,7 @@ class BibliographyLoader:
 
         bibliography_entry_title = bibliography_entry.get(
             "title"
-        ) or bibliography_entry.get("journal")
+        ) or bibliography_entry.get(self._alternative_title_tag)
 
         bibliography_entry_abstract = (
             bibliography_entry.get("abstract") or bibliography_entry_title

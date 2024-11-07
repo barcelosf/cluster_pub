@@ -13,6 +13,8 @@ logger = getLogger(__name__)
 
 class NBibLoader(BibliographyLoader):
 
+    _alternative_title_tag = "journal"
+
     def load_bibliography_file_entries(self, bibliography_file: str) -> List[Dict]:
 
         with open(file=bibliography_file, encoding=FileEncodingEnum.UTF8) as nbib_file:
