@@ -31,7 +31,10 @@ class BibliographyLoader:
         self, bibliography_entry: Dict
     ) -> BibliographyFileData:
 
-        bibliography_entry_title = bibliography_entry.get("title")
+        bibliography_entry_title = bibliography_entry.get(
+            "title"
+        ) or bibliography_entry.get("journal")
+
         bibliography_entry_abstract = (
             bibliography_entry.get("abstract") or bibliography_entry_title
         )
