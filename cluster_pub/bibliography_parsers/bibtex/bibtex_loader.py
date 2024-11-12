@@ -13,6 +13,8 @@ logger = getLogger(__name__)
 
 class BibTexLoader(BibliographyLoader):
 
+    _alternative_title_tag: str = "book_title"
+
     def __init__(self):
         self.bibtex_parser = BibTexParser(customization=parse_bibtex_entry)
 
